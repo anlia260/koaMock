@@ -1,0 +1,27 @@
+{
+  "name": "mockserver",
+  "version": "1.0.0",
+  "description": "api mockjs koa",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./app/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitdust/mockserver.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitdust/mockserver/issues"
+  },
+  "homepage": "https://github.com/gitdust/mockserver#readme",
+  "dependencies": {
+    "koa": "^1.2.1",
+    "koa-body": "^1.4.0",
+    "koa-cors": "0.0.16",
+    "koa-router": "^5.4.0",
+    "mockjs": "^1.0.1-beta2"
+  }
+}
