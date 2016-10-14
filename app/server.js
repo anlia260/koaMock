@@ -19,11 +19,14 @@ function GetApiDatas(moduleName) {
 }
 /** 路由 */
 
-// router.get('/api/users', koaBody, function*() {
-//     this.body = GetApiDatas('./jzdy/index/menu');
-// })
 mockData.forEach(function(item) {
-    router.get(item.api, koaBody, function*(request) {
-        this.body = item.response;
-    })
+	if(item.type == "post"){
+		router.post(item.api, koaBody, function*(request) {
+	        this.body = item.response;
+	    })	
+	}else{
+		router.get(item.api, koaBody, function*(request) {
+	        this.body = item.response;
+	    })	
+	}
 })
