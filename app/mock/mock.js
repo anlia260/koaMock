@@ -2,7 +2,7 @@ var adCreate = {
     api: '/authed/ad/api/create',
     type:'get',
     response: {
-        "status": "0",
+        "status": 0,
         "msg": "操作成功",
         "data": {
             "campaigns": [{
@@ -429,7 +429,7 @@ var adList = {
                     "subject_detail": "vrfedsbvrfebre",
                     "platform_id":1,
                     "version": 2,
-                    "status": 5,
+                    "status": 2,
                     "index_status": 2,
                     "space_id":1,
                     "pay_mode": 'CPT',
@@ -480,7 +480,7 @@ var adList = {
                     "subject_detail": "vrfedsbvrfebre",
                     "platform_id":1,
                     "version": 2,
-                    "status": 5,
+                    "status": 4,
                     "index_status": 3,
                     "space_id":1,
                     "pay_mode": 'CPT',
@@ -659,7 +659,7 @@ var adDel ={
     "api": '/authed/ad/delete',
     "type":'post',
     response:{
-      "status": 100,
+      "status": 0,
       "msg": "操作成功",
       "data":{}
     }
@@ -719,7 +719,7 @@ var adSatistical ={
       "status": 0,
       "msg": "操作成功",
       "data":{
-        'ad_id':'57ee0911fa240603ae57b0d9',
+        'ad_id':Math.random(),
         'table':getTable(),
       }
     }
