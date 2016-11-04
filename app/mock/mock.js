@@ -85,16 +85,16 @@ var getIdeaType = {
                     'name': 'img_url_1',
                     'size': '100kb',
                     'format': 'image/png|image/jpeg',
-                    'width': '100',
-                    'height': '200',
+                    'width': 100,
+                    'height': 240,
                     'desc': '图片说明'
                 }, {
                     'type': 'image',
                     'name': 'img_url_2',
                     'size': '50kb',
                     'format': 'image/png|image/jpeg',
-                    'width': '100',
-                    'height': '200',
+                    'width': 1132,
+                    'height': 1421,
                     'desc': '图片说明'
                 }, {
                     'type': 'txt',
@@ -147,7 +147,7 @@ function  getAr(){
             'value': '湖南省'+i,
             'children': [{
                 'id': i,
-                'value': '湖南省-长沙市',
+                'value': '湖南省|长沙市',
             }]
         })
     }
@@ -313,7 +313,8 @@ var login = {
         "data": {
              account: "admin@admin.com",
              nickname:"王小二",
-             id:1
+             id:1,
+             is_admin:1
         }
     }
 }
@@ -364,6 +365,7 @@ var adList = {
             "items":[
                 {
                     "_id": "57edd0ddfa240603b1026222",
+                    "ordinal":1,
                     "daily_budget": 0,
                     "campaign_id": "百度推广计划",
                     "campaign_name": "campaign_name",
@@ -420,6 +422,7 @@ var adList = {
                 },
                 {
                     "_id": "57edd6fa5de14f43aa555f51",
+                    "ordinal":2,
                     "campaign_id": "101",
                     "campaign_name": "百度推广计划",
                     "name": "测试广告2",
@@ -471,6 +474,7 @@ var adList = {
                 },
                 {
                     "_id": "57edd6fa5de14f43aa555f51",
+                    "ordinal":3,
                     "campaign_id": "101",
                     "campaign_name": "百度推广计划",
                     "name": "测试广告2",
@@ -522,6 +526,7 @@ var adList = {
                 },
                 {
                     "_id": "57edd6fa5de14f43aa555f51",
+                    "ordinal":4,
                     "campaign_id": "101",
                     "campaign_name": "百度推广计划",
                     "name": "测试广告2",
@@ -703,7 +708,7 @@ var campaignSatistical ={
 
 var campaignAdd ={
     "api": '/authed/campaign/store',
-    "type":'post',
+    "type":'get',
     response:{
       "status": 0,
       "msg": "操作成功",
@@ -761,5 +766,4 @@ module.exports = [
     campaignSatistical,
     campaignDel,
     campaignEdit
-    
 ]
